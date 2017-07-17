@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 module.exports = {
     module: {
@@ -16,13 +16,13 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        // new webpack.HotModuleReplacementPlugin(),
+        // new webpack.NoErrorsPlugin()
     ],
     entry: {
         "index": [
             'babel-regenerator-runtime',
-            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
+            // 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
             './'
         ]
     },
@@ -32,7 +32,10 @@ module.exports = {
         filename: "[name].bundle.js"
     },
     resolve: {
-        extensions: ['', '.js', '.jsx'],
+        extensions: ['', '.js', '.jsx','.json'],
+    },
+    node: {
+        fs: "empty"
     },
     devtool: 'source-map'
 };

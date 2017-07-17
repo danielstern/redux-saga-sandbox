@@ -4,9 +4,13 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server.js"
   },
   "keywords": [],
+  "devDependencies": {
+
+  },
   "dependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
@@ -18,8 +22,10 @@
     "classnames": "^2.2.5",
     "cors": "^2.8.3",
     "express": "^4.15.3",
+    "fs": "0.0.1-security",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
+    "json-loader": "^0.5.4",
     "lodash": "^4.17.4",
     "query-string": "^4.3.4",
     "react": "^15.5.4",
@@ -32,6 +38,7 @@
     "reselect": "^2.5.4",
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.10.1",
+    "webpack-dev-server": "^2.5.1",
     "webpack-hot-middleware": "^2.17.1"
   },
   "author": "",
