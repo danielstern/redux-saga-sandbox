@@ -13,3 +13,5 @@ window.run = (generatorFn)=>sagaMiddleware.run(generatorFn);
 window.effects = effects;
 window.dispatch = (action)=>store.dispatch(action);
 window.delay = delay;
+
+console.log('%c Redux Saga Sandbox', 'color: #333; font-weight: bold; font-size: 24px');
