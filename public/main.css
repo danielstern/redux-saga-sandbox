@@ -1,0 +1,12 @@
+body {
+    background-color: #fefefe;
+}
+.container {
+    padding: 2em;
+    margin-top: 2em;
+    background-color:#fff;
+}
+
+.console-reference {
+    margin-top: 2em;
+}

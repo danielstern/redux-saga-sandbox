@@ -2,15 +2,14 @@
   "name": "generator-sandbox",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "babel-node server.js"
   },
   "keywords": [],
-  "devDependencies": {
-
-  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
@@ -18,15 +17,17 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.23.0",
     "babel-regenerator-runtime": "^6.5.0",
+    "buffertools": "^2.1.6",
     "chance": "^1.0.6",
     "classnames": "^2.2.5",
+    "co": "^4.6.0",
+    "colors": "^1.1.2",
     "cors": "^2.8.3",
     "express": "^4.15.3",
-    "fs": "0.0.1-security",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
-    "json-loader": "^0.5.4",
     "lodash": "^4.17.4",
+    "net": "^1.0.2",
     "query-string": "^4.3.4",
     "react": "^15.5.4",
     "react-dom": "^15.4.2",
@@ -36,11 +37,19 @@
     "redux-saga": "^0.15.3",
     "redux-thunk": "^2.2.0",
     "reselect": "^2.5.4",
+    "sandbox": "^0.8.6",
+    "sandcastle": "^1.3.3",
+    "socket.io": "^2.0.3",
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.10.1",
-    "webpack-dev-server": "^2.5.1",
     "webpack-hot-middleware": "^2.17.1"
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "jest": "^20.0.4",
+    "mocha": "^3.4.2",
+    "redux-devtools": "^3.4.0",
+    "redux-tool": "^1.0.0",
+    "webpack-dev-server": "^1.16.5"
+  }
 }

@@ -1,15 +1,107 @@
 <!doctype html>
 <html>
 <head>
-    <title>Generator Sandbox</title>
+    <title>ES6 Yield / Generator Sandbox</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="main.css" rel="stylesheet">
 </head>
 <body>
-    <div id="AppContainer" class="container">
-
+    <div class="container">
+        <h1>
+            Redux Saga Sandbox
+        </h1>
+        <h3>
+            (F12 to open Developer Tools)
+        </h3>
+        <section class="console-reference">
+        <h5>Console Reference</h5>
+            <p>
+                The following variables are available in the console (F12).
+            </p>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    Property Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Sample Usage
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>
+                    effects
+                </th>
+                <td>
+                    All Redux Saga effects
+                </td>
+                <td>
+                    <code>
+                    effects.call(parseFloat,"32a")
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    run
+                </th>
+                <td>
+                    Runs a generator as a saga
+                </td>
+                <td>
+                    <code>
+                        run(function*(){yield effects.take("SET_VALUE")})
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    delay
+                </th>
+                <td>
+                    Delay Utility (from Redux Saga)
+                </td>
+                <td>
+                    <code>
+                        yield delay(42);
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    dispatch
+                </th>
+                <td>
+                    Dispatches an action to the store in which sagas are running
+                </td>
+                <td>
+                    <code>
+                        dispatch({type:"SET_VALUE",value:42})
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    co
+                </th>
+                <td>
+                    The co.js library
+                </td>
+                <td>
+                    <code>
+                        co.wrap(function*(){return 42});
+                    </code>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </section>
     </div>
-
     <script src="/assets/index.bundle.js"></script>
 </body>
 </html>
