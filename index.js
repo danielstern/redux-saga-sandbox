@@ -1,13 +1,14 @@
 import React from 'react';
 import co from 'co';
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import * as effects from 'redux-saga/effects';
 import { delay } from 'redux-saga';
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(a=>a,{},compose(sagaMiddleware));
+const store = createStore(a=>a,{},compose(applyMiddleware(sagaMiddleware)));
 
+window.store = store;
 window.co = co;
 window.run = (generatorFn)=>sagaMiddleware.run(generatorFn);
 window.effects = effects;
