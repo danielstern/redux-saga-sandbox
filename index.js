@@ -3,7 +3,7 @@ import co from 'co';
 import { createStore, compose, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import * as effects from 'redux-saga/effects';
-import { delay, eventChannel } from 'redux-saga';
+import { delay, eventChannel, channel } from 'redux-saga';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(a=>a,{},compose(applyMiddleware(sagaMiddleware)));
@@ -16,5 +16,6 @@ window.dispatch = (action)=>store.dispatch(action);
 window.delay = delay;
 window.eventChannel = eventChannel;
 window.actionChannel = effects.actionChannel;
+window.channel = channel;
 
 console.log('%c Redux Saga Sandbox', 'color: #333; font-weight: bold; font-size: 24px');
