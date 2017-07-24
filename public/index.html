@@ -107,7 +107,7 @@
                 </td>
                 <td>
                     <code>
-                        const chan = new eventChannel(()=>()=>{})
+                        const chan = yield eventChannel(()=>()=>{})
                     </code>
                 </td>
             </tr>
@@ -120,7 +120,7 @@
                 </td>
                 <td>
                     <code>
-                        const chan = new actionChannel("MY_ACTION");
+                        const chan = yield actionChannel("MY_ACTION");
                     </code>
                 </td>
             </tr>
@@ -133,7 +133,7 @@
                 </td>
                 <td>
                     <code>
-                        const chan = new channel();
+                        const chan = yield channel();
                     </code>
                 </td>
             </tr>
