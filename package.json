@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "babel-node server.js"
+    "start": "npm install -g babel-cli && babel-node server.js"
   },
   "keywords": [],
   "author": "",
