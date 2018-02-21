@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "npm install -g babel-cli && babel-node server.js"
+    "start": "npx babel-node server.js"
   },
   "keywords": [],
   "author": "",
@@ -45,9 +45,9 @@
     "webpack-hot-middleware": "^2.17.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "chai": "^4.0.2",
     "jest": "^20.0.4",
-    "babel-cli": "^6.26.0",
     "mocha": "^3.4.2",
     "redux-devtools": "^3.4.0",
     "redux-tool": "^1.0.0",
